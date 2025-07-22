@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoTech.UI.Tests", "BoTech.UI.Tests\BoTech.UI.Tests.csproj", "{3EC85C4A-9152-41C4-A249-35D4D61034FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoTech.UI", "BoTech.UI\BoTech.UI.csproj", "{D8E0D842-ECCC-4B90-B286-FCB989FF5F20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EC85C4A-9152-41C4-A249-35D4D61034FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC85C4A-9152-41C4-A249-35D4D61034FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC85C4A-9152-41C4-A249-35D4D61034FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC85C4A-9152-41C4-A249-35D4D61034FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E0D842-ECCC-4B90-B286-FCB989FF5F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E0D842-ECCC-4B90-B286-FCB989FF5F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E0D842-ECCC-4B90-B286-FCB989FF5F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E0D842-ECCC-4B90-B286-FCB989FF5F20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

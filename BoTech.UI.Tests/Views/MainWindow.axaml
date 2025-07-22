@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BoTech.UI.Tests.ViewModels"
+        xmlns:botechui="https://github.com/BoTech-Development/BoTech.UI"
+        x:Class="BoTech.UI.Tests.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="BoTech.UI.Tests">
+    <StackPanel>
+        <TextBlock>Bello</TextBlock>
+        <ContentPresenter Content="{Binding TestGroupBox}"></ContentPresenter>
+        <botechui:GroupBox Header="My Header">
+           
+        </botechui:GroupBox>
+
+    </StackPanel>
+
+</Window>

@@ -1,0 +1,13 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:botechui="https://github.com/BoTech-Development/BoTech.UI"
+             xmlns:theme="https://github.com/BoTech-Development/BoTech.UI"
+             x:Class="BoTech.UI.Tests.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />
+        <theme:BoTechTheme/>
+    </Application.Styles>
+</Application>
