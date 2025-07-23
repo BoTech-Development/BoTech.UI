@@ -1,1 +1,1 @@
-﻿![BoTech Logo](ReadmeAssets/BoTechLogoComplete.png)
+﻿![BoTech Logo](https://raw.githubusercontent.com/BoTech-Development/BoTech.UI/master/ReadmeAssets/BoTechLogoComplete.png)

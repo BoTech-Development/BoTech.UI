@@ -4,9 +4,21 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>1.0.2-alpha</Version>
+        <Description>A simple UI-Library for Avalonia which includes a GroupBox</Description>
+        <Copyright>MIT</Copyright>
+        <PackageProjectUrl>https://github.com/BoTech-Development/</PackageProjectUrl>
+        <PackageIcon>BoTech-Avatar.png</PackageIcon>
+        <RepositoryUrl>https://github.com/BoTech-Development/BoTech.UI</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseUrl>https://opensource.org/license/mit</PackageLicenseUrl>
+        <PackageReleaseNotes>Added support for BoTech.UI.Forms
+and GroupBox</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
+        <None Include="../README.md" Pack="true" PackagePath="\"/>
       <PackageReference Include="Avalonia" Version="11.3.2" />
       <PackageReference Include="Material.Icons.Avalonia" Version="2.4.1" />
     </ItemGroup>
@@ -16,6 +28,13 @@
         <DependentUpon>GroupBox</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="BoTech-Avatar.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

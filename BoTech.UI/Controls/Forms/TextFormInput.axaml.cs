@@ -7,12 +7,12 @@ public class TextFormInput : FormInput
     /// <summary>
     /// The ctor will set the Default Value
     /// </summary>
-    public static readonly StyledProperty<bool> ResultProperty =
-        AvaloniaProperty.Register<TextFormInput, bool>(nameof(Result), defaultValue: false);
+    public static readonly StyledProperty<string> ResultProperty =
+        AvaloniaProperty.Register<TextFormInput, string>(nameof(Result), defaultValue: "");
     /// <summary>
     /// Current selection
     /// </summary>
-    public bool Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
+    public string Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
     /// <summary>
     /// The ctor will set the Default Value
     /// </summary>
