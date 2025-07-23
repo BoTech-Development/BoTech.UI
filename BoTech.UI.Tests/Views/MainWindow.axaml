@@ -7,13 +7,16 @@
         x:Class="BoTech.UI.Tests.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Title="BoTech.UI.Tests">
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
     <StackPanel>
         <TextBlock>Bello</TextBlock>
-        <ContentPresenter Content="{Binding TestGroupBox}"></ContentPresenter>
-        <botechui:GroupBox Header="My Header">
-           
+        <ContentPresenter Content="{Binding TestControl}"></ContentPresenter>
+        <botechui:GroupBox Header="Group"
+                           Margin="5">
+           <Button>Click Me</Button>
         </botechui:GroupBox>
-
     </StackPanel>
 
 </Window>

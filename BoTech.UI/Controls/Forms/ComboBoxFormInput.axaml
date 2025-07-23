@@ -1,0 +1,29 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+                    xmlns:control="https://github.com/BoTech-Development/BoTech.UI">
+    <ControlTheme x:Key="{x:Type control:ComboBoxFormInput}" TargetType="control:ComboBoxFormInput">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                               Margin="0,0,10,0"
+                               Text="{TemplateBinding InputName}"/>
+                    <ComboBox  SelectedItem="{TemplateBinding Result}"
+                               ItemsSource="{TemplateBinding Items}">
+                        
+                    </ComboBox>
+                    <Button Margin="0,0,10,0"
+                            VerticalAlignment="Center">
+                        <Button.Flyout>
+                            <Flyout>
+                                <TextBlock Text="{TemplateBinding HelpText}"/>
+                            </Flyout>
+                        </Button.Flyout>
+                        <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
+                    </Button>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

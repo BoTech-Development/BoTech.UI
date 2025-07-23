@@ -1,0 +1,29 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:control="clr-namespace:BoTech.UI.Controls.Forms"
+                    xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia">
+    <Design.PreviewWith>
+
+    </Design.PreviewWith>
+    <ControlTheme x:Key="{x:Type control:FormInput}" TargetType="control:FormInput">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                               Margin="0,0,10,0"
+                               Text="{TemplateBinding InputName}"/>
+                  
+                    <Button Margin="0,0,10,0"
+                            VerticalAlignment="Center">
+                        <Button.Flyout>
+                            <Flyout>
+                                <TextBlock Text="{TemplateBinding HelpText}"/>
+                            </Flyout>
+                        </Button.Flyout>
+                        <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
+                    </Button>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
