@@ -3,7 +3,7 @@ using Avalonia.Controls;
 
 namespace BoTech.UI.Controls.Forms;
 
-public abstract class FormInput<T> : ContentControl
+public abstract class FormInput<T> : ContentControl, IFormInput
 {
     public static readonly StyledProperty<string> InputNameProperty =
         AvaloniaProperty.Register<FormInput<dynamic>, string>(nameof(InputName));

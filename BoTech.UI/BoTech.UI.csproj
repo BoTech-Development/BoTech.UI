@@ -5,15 +5,15 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.4-alpha</Version>
+        <Version>1.0.5-alpha</Version>
         <Description>A simple UI-Library for Avalonia which includes a GroupBox</Description>
         <Copyright>MIT</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/BoTech-Development/</PackageProjectUrl>
         <PackageIcon>BoTech-Avatar.png</PackageIcon>
         <RepositoryUrl>https://github.com/BoTech-Development/BoTech.UI</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseUrl>https://opensource.org/license/mit</PackageLicenseUrl>
-        <PackageReleaseNotes>The Result property has been added to the FormInput.cs class so that all other classes that inherit from it must also implement this property.</PackageReleaseNotes>
+        <PackageReleaseNotes>Created IFormInput interface for the Package BoTech.UI.Forms</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
