@@ -4,7 +4,7 @@ using Avalonia.Styling;
 
 namespace BoTech.UI.Controls.Forms;
 
-public class BoolFormInput : FormInput
+public class BoolFormInput : FormInput<bool>
 {
     /// <summary>
     /// The ctor will set the Default Value
@@ -14,7 +14,7 @@ public class BoolFormInput : FormInput
     /// <summary>
     /// Current selection
     /// </summary>
-    public bool Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
+    public override bool Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
     
     public BoolFormInput(string inputName, string helpText, bool defaultValue) : base(inputName, helpText)
     {

@@ -5,7 +5,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceInclude Source="avares://BoTech.UI/Controls/GroupBox.axaml" />
-                <ResourceInclude Source="avares://BoTech.UI/Controls/Forms/FormInput.axaml" />
                 <ResourceInclude Source="avares://BoTech.UI/Controls/Forms/BoolFormInput.axaml" />
                 <ResourceInclude Source="avares://BoTech.UI/Controls/Forms/TextFormInput.axaml" />
                 <ResourceInclude Source="avares://BoTech.UI/Controls/Forms/NumberFormInput.axaml" />

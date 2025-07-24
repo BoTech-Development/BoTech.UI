@@ -2,7 +2,7 @@ using Avalonia;
 
 namespace BoTech.UI.Controls.Forms;
 
-public class TextFormInput : FormInput
+public class TextFormInput : FormInput<string>
 {
     /// <summary>
     /// The ctor will set the Default Value
@@ -12,7 +12,7 @@ public class TextFormInput : FormInput
     /// <summary>
     /// Current selection
     /// </summary>
-    public string Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
+    public override string Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
     /// <summary>
     /// The ctor will set the Default Value
     /// </summary>
