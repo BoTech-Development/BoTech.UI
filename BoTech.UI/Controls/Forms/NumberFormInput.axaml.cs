@@ -3,7 +3,7 @@ using Avalonia.Controls;
 
 namespace BoTech.UI.Controls.Forms;
 
-public class NumberFormInput : FormInput<decimal>
+public class NumberFormInput : FormInput
 {
     private NumericUpDownConfiguration _conf;
     public static readonly StyledProperty<decimal> IncrementProperty =
@@ -47,7 +47,7 @@ public class NumberFormInput : FormInput<decimal>
     /// <summary>
     /// Current selection
     /// </summary>
-    public override decimal Result
+    public override dynamic Result
     {
         get => GetValue(ResultProperty); 
         set => SetValue(ResultProperty, value);

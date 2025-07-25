@@ -3,7 +3,7 @@ using Avalonia.Controls;
 
 namespace BoTech.UI.Controls.Forms;
 
-public class ComboBoxFormInput : FormInput<ComboBoxItem>
+public class ComboBoxFormInput : FormInput
 {
     
     /// <summary>
@@ -15,7 +15,7 @@ public class ComboBoxFormInput : FormInput<ComboBoxItem>
     /// <summary>
     /// Current selection
     /// </summary>
-    public override ComboBoxItem Result
+    public override dynamic Result
     {
         get => GetValue(ResultProperty); 
         set => SetValue(ResultProperty, value);

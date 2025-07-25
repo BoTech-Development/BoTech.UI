@@ -1,3 +1,5 @@
+using Avalonia.Controls;
+
 namespace BoTech.UI.Controls.Forms;
 
 public interface IFormInput
