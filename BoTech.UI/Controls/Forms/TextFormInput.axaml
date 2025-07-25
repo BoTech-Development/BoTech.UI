@@ -9,7 +9,7 @@
                     <TextBlock VerticalAlignment="Center"
                                Margin="0,0,10,0"
                                Text="{TemplateBinding InputName}"/>
-                    <TextBox Text="{TemplateBinding Result}"
+                    <TextBox Text="{TemplateBinding Result, Mode=TwoWay}"
                              Watermark="{TemplateBinding Watermark}"/>
                     <Button Margin="0,0,10,0"
                             VerticalAlignment="Center">

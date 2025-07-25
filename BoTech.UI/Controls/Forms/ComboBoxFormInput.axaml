@@ -9,7 +9,7 @@
                     <TextBlock VerticalAlignment="Center"
                                Margin="0,0,10,0"
                                Text="{TemplateBinding InputName}"/>
-                    <ComboBox  SelectedItem="{TemplateBinding Result}"
+                    <ComboBox  SelectedItem="{TemplateBinding Result, Mode=TwoWay}"
                                ItemsSource="{TemplateBinding Items}">
                         
                     </ComboBox>

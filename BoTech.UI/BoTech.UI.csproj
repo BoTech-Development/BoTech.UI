@@ -4,8 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>1.0.5-alpha</Version>
+        <Version>1.0.7-alpha</Version>
         <Description>A simple UI-Library for Avalonia which includes a GroupBox</Description>
         <Copyright>MIT</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -13,7 +12,8 @@
         <PackageIcon>BoTech-Avatar.png</PackageIcon>
         <RepositoryUrl>https://github.com/BoTech-Development/BoTech.UI</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>Created IFormInput interface for the Package BoTech.UI.Forms</PackageReleaseNotes>
+        <PackageReleaseNotes>Fixed Result update Property issue in all FormInputs.</PackageReleaseNotes>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
