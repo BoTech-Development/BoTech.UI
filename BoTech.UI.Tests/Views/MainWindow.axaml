@@ -12,7 +12,8 @@
     </Design.DataContext>
     <StackPanel>
         <TextBlock>Bello</TextBlock>
-        <ContentPresenter Content="{Binding TestControl}"></ContentPresenter>
+        <ContentPresenter Content="{Binding RequiredInput}"></ContentPresenter>
+        <ContentPresenter Content="{Binding OptionalInput}"></ContentPresenter>
         <botechui:GroupBox Header="Group"
                            Margin="5">
            <Button>Click Me</Button>

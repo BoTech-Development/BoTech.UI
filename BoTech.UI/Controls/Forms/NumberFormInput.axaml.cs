@@ -49,14 +49,28 @@ public class NumberFormInput : FormInput
     /// </summary>
     public override dynamic Result
     {
-        get => GetValue(ResultProperty); 
-        set => SetValue(ResultProperty, value);
+        get => GetValue(ResultProperty);
+        set
+        {
+            SetValue(ResultProperty, value);
+        }
     }
+
     
-    public NumberFormInput(string inputName, string helpText, NumericUpDownConfiguration configuration) : base(inputName, helpText)
+    public NumberFormInput(string inputName, string helpText,bool isRequired, NumericUpDownConfiguration configuration) : base(inputName, helpText, isRequired)
     {
         Result = configuration.Value;
         _conf = configuration;
+    }
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+
+        // if the changed property is the ResultProperty, we need to update the Icon and the color etc.
+        if (change.Property == ResultProperty) 
+        {
+            UpdateInfoText();
+        }
     }
     /// <summary>
     /// Configuration of the NumericUpDown Control

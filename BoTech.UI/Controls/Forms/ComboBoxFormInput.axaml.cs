@@ -38,9 +38,19 @@ public class ComboBoxFormInput : FormInput
     /// <param name="helpText"></param>
     /// <param name="items"></param>
     /// <param name="defaultValue"></param>
-    public ComboBoxFormInput(string inputName, string helpText, List<ComboBoxItem> items, ComboBoxItem defaultValue) : base(inputName, helpText)
+    public ComboBoxFormInput(string inputName, string helpText,bool isRequired, List<ComboBoxItem> items, ComboBoxItem defaultValue) : base(inputName, helpText, isRequired)
     {
         Result = defaultValue;
         Items = items;
+    }
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+
+        // if the changed property is the ResultProperty, we need to update the Icon and the color etc.
+        if (change.Property == ResultProperty) 
+        {
+            UpdateInfoText();
+        }
     }
 }

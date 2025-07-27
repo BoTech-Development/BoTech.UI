@@ -9,9 +9,11 @@ namespace BoTech.UI.Tests.ViewModels;
 
 public class MainWindowViewModel : ReactiveObject
 {
-    public Control TestControl { get; set; }
+    public Control RequiredInput { get; set; }
+    public Control OptionalInput { get; set; }
     public MainWindowViewModel()
     {
-        TestControl =  new BoolFormInput("Is BoTech.DesignerForAvalonia a cool project? ", "Of course it is a cool project", true);
+        RequiredInput = new TextFormInput("Is BoTech.DesignerForAvalonia a cool project? ", "Of course it is a cool project",  true,null);
+        OptionalInput = new TextFormInput("Some Text input:", "Enter something", false,null);
     }
 }

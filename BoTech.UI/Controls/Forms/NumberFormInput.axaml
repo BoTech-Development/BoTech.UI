@@ -10,11 +10,27 @@
                     <TextBlock VerticalAlignment="Center"
                                Margin="0,0,10,0"
                                Text="{TemplateBinding InputName}"/>
-                    <NumericUpDown Value="{TemplateBinding  Result, Mode=TwoWay}"
-                                   Increment="{TemplateBinding Increment}"
-                                   Minimum="{TemplateBinding Minimum}"
-                                   Maximum="{TemplateBinding Maximum}"
-                                   FormatString="{TemplateBinding FormatString}"/>
+                    <StackPanel Orientation="Vertical"
+                                VerticalAlignment="Center">
+                        <TextBlock Margin="5,0,10,0"
+                                   Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                   FontSize="12"
+                                   IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
+                                   Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
+                        <NumericUpDown Value="{TemplateBinding  Result, Mode=TwoWay}"
+                                        Increment="{TemplateBinding Increment}"
+                                        Minimum="{TemplateBinding Minimum}"
+                                        Maximum="{TemplateBinding Maximum}"
+                                        FormatString="{TemplateBinding FormatString}"
+                                        BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                        BorderThickness="3"/>
+                    </StackPanel>
+                    <Border>
+                        <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
+                                               Width="24"
+                                               Height="24"
+                                               Kind="{TemplateBinding IconNextToTheInputBox}"/>
+                    </Border>
                     <Button Margin="0,0,10,0"
                             VerticalAlignment="Center">
                         <Button.Flyout>

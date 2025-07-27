@@ -12,9 +12,23 @@
                     <TextBlock VerticalAlignment="Center"
                                Margin="0,0,10,0"
                                Text="{TemplateBinding InputName}"/>
-                    <CheckBox  IsChecked="{TemplateBinding Result, Mode=TwoWay}">
-                        
-                    </CheckBox>
+                    <StackPanel Orientation="Vertical"
+                                VerticalAlignment="Center">
+                        <TextBlock Margin="5,0,10,0"
+                                   Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                   FontSize="12"
+                                   IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
+                                   Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
+                        <CheckBox  IsChecked="{TemplateBinding Result, Mode=TwoWay}"
+                                   BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                   BorderThickness="3"/>
+                    </StackPanel>
+                    <Border>
+                        <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
+                                               Width="24"
+                                               Height="24"
+                                               Kind="{TemplateBinding IconNextToTheInputBox}"/>
+                    </Border>
                     <Button Margin="0,0,10,0"
                             VerticalAlignment="Center">
                         <Button.Flyout>

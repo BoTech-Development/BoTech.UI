@@ -16,9 +16,19 @@ public class BoolFormInput : FormInput
     /// </summary>
     public override dynamic Result { get => GetValue(ResultProperty); set => SetValue(ResultProperty, value); }
     
-    public BoolFormInput(string inputName, string helpText, bool defaultValue) : base(inputName, helpText)
+    public BoolFormInput(string inputName, string helpText, bool isRequired, bool defaultValue) : base(inputName, helpText, isRequired)
     {
         Result = defaultValue;
+    }
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+
+        // if the changed property is the ResultProperty, we need to update the Icon and the color etc.
+        if (change.Property == ResultProperty) 
+        {
+            UpdateInfoText();
+        }
     }
 
 }

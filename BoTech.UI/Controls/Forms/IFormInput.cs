@@ -6,4 +6,5 @@ public interface IFormInput
 {
     public string InputName { get; set; }
     public string HelpText { get; set; }
+    public bool IsRequired { get; set; }
 }
