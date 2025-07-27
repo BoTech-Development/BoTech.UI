@@ -5,37 +5,61 @@
     <ControlTheme x:Key="{x:Type control:ComboBoxFormInput}" TargetType="control:ComboBoxFormInput">
         <Setter Property="Template">
             <ControlTemplate>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
                     <TextBlock VerticalAlignment="Center"
-                               Margin="0,0,10,0"
+                               HorizontalAlignment="Left"
+                               FontWeight="Bold"
                                Text="{TemplateBinding InputName}"/>
-                    <StackPanel Orientation="Vertical"
-                                VerticalAlignment="Center">
-                        <TextBlock Margin="5,0,10,0"
-                                   Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
-                                   FontSize="12"
-                                   IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
-                                   Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
-                        <ComboBox  SelectedItem="{TemplateBinding Result, Mode=TwoWay}"
-                                   ItemsSource="{TemplateBinding Items}" 
-                                   BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
-                                   BorderThickness="3"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid VerticalAlignment="Center"
+                              HorizontalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Name="PART_HeaderBorder"
+                                    Padding="5,0,5,0" 
+                                    Margin="5,0,10,0"
+                                    ZIndex="1">
+                                <StackPanel Orientation="Horizontal"
+                                            Background="{DynamicResource SystemControlBackgroundAltHighBrush}" >
+                                    <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
+                                                       Width="18"
+                                                       Height="18"
+                                                       Kind="{TemplateBinding IconNextToTheInputBox}"/>
+                                    <TextBlock VerticalAlignment="Center"
+                                           Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                           FontSize="12"
+                                           IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
+                                           Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.RowSpan="2" 
+                                    Grid.ColumnSpan="2"
+                                    Name="PART_ContentBorder"
+                                    Padding="5,5,5,5"
+                                    Margin="0,10,0,0">
+                                <ComboBox  SelectedItem="{TemplateBinding Result, Mode=TwoWay}"
+                                           ItemsSource="{TemplateBinding Items}"  
+                                           BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                           MinWidth="{Binding #PART_HeaderBorder.Bounds.Width}"/>
+                            </Border>
+                        </Grid>
+                        <Button Margin="10,0,10,0"
+                                VerticalAlignment="Center"
+                                Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                            <Button.Flyout>
+                                <Flyout>
+                                    <TextBlock Text="{TemplateBinding HelpText}"/>
+                                </Flyout>
+                            </Button.Flyout>
+                            <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
+                        </Button>
                     </StackPanel>
-                    <Border>
-                        <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
-                                               Width="24"
-                                               Height="24"
-                                               Kind="{TemplateBinding IconNextToTheInputBox}"/>
-                    </Border>
-                    <Button Margin="0,0,10,0"
-                            VerticalAlignment="Center">
-                        <Button.Flyout>
-                            <Flyout>
-                                <TextBlock Text="{TemplateBinding HelpText}"/>
-                            </Flyout>
-                        </Button.Flyout>
-                        <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
-                    </Button>
                 </StackPanel>
             </ControlTemplate>
         </Setter>

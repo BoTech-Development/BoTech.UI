@@ -61,6 +61,9 @@ public class NumberFormInput : FormInput
     {
         Result = configuration.Value;
         _conf = configuration;
+        _defaultValue = configuration.Value;
+        InfoText = "Please enter a Value.";
+        UpdateInfoText();
     }
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {

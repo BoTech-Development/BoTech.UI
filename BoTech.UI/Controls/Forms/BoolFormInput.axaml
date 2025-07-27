@@ -8,36 +8,39 @@
     <ControlTheme x:Key="{x:Type control:BoolFormInput}" TargetType="control:BoolFormInput">
         <Setter Property="Template">
             <ControlTemplate>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
                     <TextBlock VerticalAlignment="Center"
-                               Margin="0,0,10,0"
+                               HorizontalAlignment="Left"
+                               FontWeight="Bold"
                                Text="{TemplateBinding InputName}"/>
-                    <StackPanel Orientation="Vertical"
-                                VerticalAlignment="Center">
-                        <TextBlock Margin="5,0,10,0"
-                                   Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
-                                   FontSize="12"
-                                   IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
-                                   Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
-                        <CheckBox  IsChecked="{TemplateBinding Result, Mode=TwoWay}"
-                                   BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
-                                   BorderThickness="3"/>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox  IsChecked="{TemplateBinding Result, Mode=TwoWay}" 
+                                       BorderBrush="{TemplateBinding InputBoxBrush, Mode=TwoWay}"/>
+                                <StackPanel Orientation="Horizontal"
+                                        Background="{DynamicResource SystemControlBackgroundAltHighBrush}" >
+                                    <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
+                                                       Width="22"
+                                                       Height="22"
+                                                       Kind="{TemplateBinding IconNextToTheInputBox}"/>
+                                    <TextBlock VerticalAlignment="Center"
+                                               Foreground="{TemplateBinding InputBoxBrush, Mode=TwoWay}"
+                                               FontSize="12"
+                                               IsVisible="{TemplateBinding IsInfoVisible, Mode=TwoWay}"
+                                               Text="{TemplateBinding InfoText, Mode=TwoWay}"/>
+                                </StackPanel>
+                                
+                          
+                            <Button Margin="10,0,10,0"
+                                    VerticalAlignment="Center"
+                                    Background="{DynamicResource SystemControlBackgroundAltHighBrush}" >
+                                <Button.Flyout>
+                                    <Flyout>
+                                        <TextBlock Text="{TemplateBinding HelpText}"/>
+                                    </Flyout>
+                                </Button.Flyout>
+                                <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
+                            </Button>
                     </StackPanel>
-                    <Border>
-                        <avalonia:MaterialIcon Foreground="{TemplateBinding InputBoxBrush}" 
-                                               Width="24"
-                                               Height="24"
-                                               Kind="{TemplateBinding IconNextToTheInputBox}"/>
-                    </Border>
-                    <Button Margin="0,0,10,0"
-                            VerticalAlignment="Center">
-                        <Button.Flyout>
-                            <Flyout>
-                                <TextBlock Text="{TemplateBinding HelpText}"/>
-                            </Flyout>
-                        </Button.Flyout>
-                        <avalonia:MaterialIcon Kind="HelpCircleOutline"/>
-                    </Button>
                 </StackPanel>
             </ControlTemplate>
         </Setter>

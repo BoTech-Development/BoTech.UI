@@ -42,6 +42,9 @@ public class ComboBoxFormInput : FormInput
     {
         Result = defaultValue;
         Items = items;
+        _defaultValue = defaultValue;
+        InfoText = "Please select.";
+        UpdateInfoText();
     }
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {

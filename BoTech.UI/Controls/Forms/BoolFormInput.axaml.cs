@@ -19,6 +19,10 @@ public class BoolFormInput : FormInput
     public BoolFormInput(string inputName, string helpText, bool isRequired, bool defaultValue) : base(inputName, helpText, isRequired)
     {
         Result = defaultValue;
+        _defaultValue = defaultValue;
+        InfoText = "Please ";
+        InfoText += defaultValue ? "disagree!" : "agree!";
+        UpdateInfoText();
     }
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {

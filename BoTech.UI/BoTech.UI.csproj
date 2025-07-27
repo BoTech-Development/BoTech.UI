@@ -4,7 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>1.0.8-alpha</Version>
+        <Version>1.0.9-alpha</Version>
         <Description>A simple UI-Library for Avalonia which includes a GroupBox</Description>
         <Copyright>MIT</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -12,7 +12,7 @@
         <PackageIcon>BoTech-Avatar.png</PackageIcon>
         <RepositoryUrl>https://github.com/BoTech-Development/BoTech.UI</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageReleaseNotes>Form Inputs allow validation =&gt; Color, Icon and Text notification</PackageReleaseNotes>
+        <PackageReleaseNotes>All FormInputs now look better.</PackageReleaseNotes>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 

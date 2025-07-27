@@ -14,10 +14,17 @@
         <TextBlock>Bello</TextBlock>
         <ContentPresenter Content="{Binding RequiredInput}"></ContentPresenter>
         <ContentPresenter Content="{Binding OptionalInput}"></ContentPresenter>
+        
+        <ContentPresenter Content="{Binding NumberInput}"></ContentPresenter>
+        <ContentPresenter Content="{Binding ComboInput}"></ContentPresenter>
+        <ContentPresenter Content="{Binding BoolInput}"></ContentPresenter>
         <botechui:GroupBox Header="Group"
                            Margin="5">
            <Button>Click Me</Button>
         </botechui:GroupBox>
+        <NumericUpDown Value="0.5" Increment="0.05" 
+                       FormatString="0.00"
+                       Minimum="0" Maximum="1"/>
     </StackPanel>
 
 </Window>

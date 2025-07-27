@@ -71,6 +71,10 @@ public abstract class FormInput : ContentControl, IFormInput
         set => SetValue(IconNextToTheInputBoxProperty, value);
     }
 
+    /// <summary>
+    /// Initial Value of the Input field.
+    /// </summary>
+    internal object? _defaultValue;
     public FormInput(string inputName, string helpText, bool isRequired)
     {
       
@@ -79,17 +83,17 @@ public abstract class FormInput : ContentControl, IFormInput
         if(IsRequired)
              InputName += "*";
         HelpText = helpText;
-        UpdateInfoText();
+        //UpdateInfoText();
     }
   
     internal void UpdateInfoText()
     {
         if (IsRequired)
         {
-            if (Result == null || string.IsNullOrEmpty(Result))
+            if (Result == null || ((object)Result!).Equals(_defaultValue))
             {
                 InputBoxBrush = Brushes.Red;
-                InfoText = "You must enter sth.";
+               // InfoText = "You must enter sth.";
                 IsInfoVisible = true;
                 IconNextToTheInputBox = MaterialIconKind.AlertCircle;
             }
@@ -102,9 +106,9 @@ public abstract class FormInput : ContentControl, IFormInput
         }
         else
         {
-            if (Result == null || string.IsNullOrEmpty(Result))
+            if (Result == null ||  ((object)Result!).Equals(_defaultValue))
             {
-                InputBoxBrush = Brushes.Blue;
+                InputBoxBrush = new SolidColorBrush(Color.Parse("#0073CF"));//   Brushes.Blue;
                 IconNextToTheInputBox = MaterialIconKind.ButtonPointer;
             }
             else

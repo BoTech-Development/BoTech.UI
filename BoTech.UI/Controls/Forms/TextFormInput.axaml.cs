@@ -31,7 +31,10 @@ public class TextFormInput : FormInput
     public string Watermark { get => GetValue(WatermarkProperty); set => SetValue(WatermarkProperty, value); }
     public TextFormInput(string inputName, string helpText, bool isRequired, string watermark) : base(inputName, helpText, isRequired)
     {
+        _defaultValue = watermark;
         Watermark = watermark;
+        InfoText = "Please enter a sth.";
+        UpdateInfoText();
     }
     protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
     {
